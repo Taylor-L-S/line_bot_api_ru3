@@ -7,7 +7,13 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 
+from database import db_session, init_db
+
 from linebot.models import *
+## pip install sqlalchemy==1.3.5
+## pip install line-bot-sdk
+## pip install 
+## 
 
 app = Flask(__name__)
 
@@ -41,4 +47,5 @@ def handle_message(event):
         event.reply_token, TextSendMessage(text='Hi! Welcome to LSTORE.'))
     
 if __name__ == "__main__":
+    init_db()
     app.run()
