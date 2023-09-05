@@ -1,0 +1,9 @@
+
+rander
+https://dashboard.render.com/web/srv-cjmtr0fjbvhs73f5r8q0/deploys/dep-cjo9epb6fquc73eog340
+
+git-hub
+https://github.com/Taylor-L-S/line_bot_api_ru3/tree/main
+
+line Developers
+https://developers.line.biz/console/channel/2000309187/messaging-api

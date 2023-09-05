@@ -1,0 +1,20 @@
+在 vscode console 打上 alembic init alembic進行初始化
+接著就會產生alembic 的資料夾和設定檔，然後修正
+在alembic.ini修正下面的路徑
+38 sqlalchemy.url = sqlite:///lstore.db
+
+到 alembic資料夾 env.py 的檔案
+加上
+import os
+import sys
+sys.path.append(os.getcwd())#才可以抓到專案的路徑
+17 # for 'autogenerate' support
+18 # from myapp import mymodel
+19 # target_metadata = mymodel.Base.metadata
+20 from app import *
+21 from database import Base
+22 target_metadata = Base.metadata
+
+在Terminal輸入:
+alembic reversion --autogenerate
+alembic upgrade head
